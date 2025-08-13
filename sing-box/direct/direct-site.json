@@ -2,7 +2,7 @@
   "version": 3,
   "rules": [
     {
-      "domain_suffix": ["bukkit.org"]
+      "domain_suffix": ["bukkit.org", "speedtest.cn"]
     }
   ]
 }
