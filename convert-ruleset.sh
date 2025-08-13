@@ -21,11 +21,6 @@ for d in mihomo/*/; do
         echo "正在转换 $f 为 ipcidr"
         ./mihomo convert-ruleset ipcidr yaml "$f" "${f%.yaml}.mrs"
     done
-    for f in "$d"*-site.yaml; do
-        [ -f "$f" ] || continue
-        echo "正在转换 $f 为 domain"
-        ./mihomo convert-ruleset domain yaml "$f" "${f%.yaml}.mrs"
-    done
 done
 
 echo "===== 所有转换操作已完成！ ====="
