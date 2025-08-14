@@ -31,7 +31,7 @@ def yaml_to_json_rule(yaml_path, json_path):
         "rules": [dict(rule)]
     }
     with open(json_path, 'w', encoding='utf-8') as f:
-        json.dump(json_obj, f, ensure_ascii=False, indent=4)
+        json.dump(json_obj, f, ensure_ascii=False, indent=2)
 
 # 处理 mihomo 目录下所有子目录的 *-ip.yaml 和 *-site.yaml 文件，转json到 sing-box 下对应目录
 for root, dirs, files in os.walk('mihomo'):
