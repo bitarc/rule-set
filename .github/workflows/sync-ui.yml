@@ -45,5 +45,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add dist-cdn-fonts.zip .version
-          git commit -m "Update dist-cdn-fonts.zip from zashboard to $(cat .version)"
+          git commit -m "Update dist.zip from zashboard to $(cat .version)"
           git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }} HEAD:main
