@@ -2,7 +2,9 @@
   "version": 3,
   "rules": [
     {
-      "domain": "www.speedtest.net.cdn.cloudflare.net",
+      "domain": [
+        "www.speedtest.net.cdn.cloudflare.net"
+      ],
       "domain_suffix": [
         "cdnst.net",
         "cellmaps.com",
@@ -19,7 +21,9 @@
       "domain_keyword": [
         "speedtest"
       ],
-      "domain_regex": "^speed\\.(coe|open)\\.ad\\.[a-z]{2,6}\\.prod\\.hosts\\.ooklaserver\\.net$"
+      "domain_regex": [
+        "^speed\\.(coe|open)\\.ad\\.[a-z]{2,6}\\.prod\\.hosts\\.ooklaserver\\.net$"
+      ]
     }
   ]
 }
