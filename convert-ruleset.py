@@ -1,5 +1,6 @@
 import os
 import subprocess
+import sys
 import yaml
 import json
 from collections import defaultdict
@@ -7,6 +8,10 @@ from collections import defaultdict
 def ensure_dir(path):
     if not os.path.exists(path):
         os.makedirs(path)
+
+# 自动适配可执行文件名
+mihomo_bin = 'mihomo.exe' if os.name == 'nt' else './mihomo'
+singbox_bin = 'sing-box.exe' if os.name == 'nt' else './sing-box'
 
 def yaml_to_json_rule(yaml_path, json_path):
     with open(yaml_path, 'r', encoding='utf-8') as f:
@@ -51,6 +56,15 @@ for root, dirs, files in os.walk('sing-box'):
         if file.endswith('.json'):
             json_path = os.path.join(root, file)
             print(f'正在转换 {json_path} 为 srs')
-            subprocess.run(['sing-box.exe', 'rule-set', 'compile', json_path])
+            subprocess.run([singbox_bin, 'rule-set', 'compile', json_path])
+
+# mihomo下所有*-ip.yaml转为*-ip.mrs
+for root, dirs, files in os.walk('mihomo'):
+    for file in files:
+        if file.endswith('-ip.yaml'):
+            yaml_path = os.path.join(root, file)
+            mrs_path = os.path.join(root, os.path.splitext(file)[0] + '.mrs')
+            print(f'正在将 {yaml_path} 转换为 {mrs_path}')
+            subprocess.run([mihomo_bin, 'convert-ruleset', 'ipcidr', 'yaml', yaml_path, mrs_path])
 
 print('全部转换完成')
