@@ -23,6 +23,8 @@ def yaml_to_json_rule(yaml_path, json_path):
                 rule['domain'].append(item.split(',', 1)[1])
             elif item.startswith('DOMAIN-REGEX,'):
                 rule['domain_regex'].append(item.split(',', 1)[1])
+            elif item.startswith('DOMAIN-KEYWORD,'):
+                rule['domain_keyword'].append(item.split(',', 1)[1])    
             # 可扩展更多类型
     json_obj = {
         "version": 3,
