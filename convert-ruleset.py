@@ -17,14 +17,14 @@ def yaml_to_json_rule(yaml_path, json_path):
         if isinstance(item, str):
             if ',' not in item:
                 rule['ip_cidr'].append(item)
+            elif item.startswith('DOMAIN,'):
+                rule['domain'].append(item.split(',', 1)[1])    
             elif item.startswith('DOMAIN-SUFFIX,'):
                 rule['domain_suffix'].append(item.split(',', 1)[1])
-            elif item.startswith('DOMAIN,'):
-                rule['domain'].append(item.split(',', 1)[1])
-            elif item.startswith('DOMAIN-REGEX,'):
-                rule['domain_regex'].append(item.split(',', 1)[1])
             elif item.startswith('DOMAIN-KEYWORD,'):
-                rule['domain_keyword'].append(item.split(',', 1)[1])    
+                rule['domain_keyword'].append(item.split(',', 1)[1]) 
+            elif item.startswith('DOMAIN-REGEX,'):
+                rule['domain_regex'].append(item.split(',', 1)[1])  
             # 可扩展更多类型
     json_obj = {
         "version": 3,
