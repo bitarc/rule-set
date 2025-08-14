@@ -46,11 +46,11 @@ for root, dirs, files in os.walk('mihomo'):
             yaml_to_json_rule(yaml_path, json_path)
 
 # 处理 sing-box 目录下所有子目录的 .json 文件，转为 srs
-for root, dirs, files in os.walk('sing-box'):
-    for file in files:
-        if file.endswith('.json'):
-            json_path = os.path.join(root, file)
-            print(f'正在转换 {json_path} 为 srs')
-            subprocess.run(['sing-box.exe', 'rule-set', 'compile', json_path])
+# for root, dirs, files in os.walk('sing-box'):
+#     for file in files:
+#         if file.endswith('.json'):
+#             json_path = os.path.join(root, file)
+#             print(f'正在转换 {json_path} 为 srs')
+#             subprocess.run(['sing-box.exe', 'rule-set', 'compile', json_path])
 
 print('全部转换完成')
