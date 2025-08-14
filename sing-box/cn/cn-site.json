@@ -118418,7 +118418,18 @@
         "vz.download.prss.microsoft.com",
         "msdprod-ad.download.prss.microsoft.com",
         "dcn01.ps5.update.playstation.net",
-        "gs2.ww.prod.dl.playstation.net"
+        "gs2.ww.prod.dl.playstation.net",
+        "c.mi.com",
+        "global.market.xiaomi.com",
+        "mifile.cn",
+        "xiaomi.cn",
+        "xiaomidns.cn",
+        "xiaomidns.com.cn",
+        "xiaomiinc.cn",
+        "xiaomiinc.com.cn",
+        "xiaomisa.cn",
+        "youpin.cn",
+        "youpin.com.cn"
       ]
     }
   ]
