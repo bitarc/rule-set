@@ -1,4 +1,3 @@
-
 # 支持 YAML 文件去重、格式化、修复格式错误
 
 import yaml
@@ -84,7 +83,7 @@ def dedup_and_format_yaml(input_path, output_path):
             return (2, x)
     str_items_sorted = sorted(str_items, key=sort_key)
     data['payload'] = str_items_sorted + other_items
-    with open(output_path, 'w', encoding='utf-8') as f:
+    with open(output_path, 'w', encoding='utf-8', newline='\n') as f:
         yaml.dump(
             data,
             f,

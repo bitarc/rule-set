@@ -1,4 +1,3 @@
-
 # 支持 YAML 文件去重、格式化、修复格式错误
 
 import yaml
@@ -92,7 +91,7 @@ def dedup_and_format_yaml(input_path, output_path):
     ipv4_list_sorted = sorted(ipv4_list)
     ipv6_list_sorted = sorted(ipv6_list)
     data['payload'] = ipv4_list_sorted + ipv6_list_sorted + other_items
-    with open(output_path, 'w', encoding='utf-8') as f:
+    with open(output_path, 'w', encoding='utf-8', newline='\n') as f:
         yaml.dump(
             data,
             f,
@@ -103,4 +102,4 @@ def dedup_and_format_yaml(input_path, output_path):
         )
 
 if __name__ == '__main__':
-    dedup_and_format_yaml('cn-ip.yaml', 'cn-ip_dedup.yaml')
+    dedup_and_format_yaml('cn-ip.yaml', 'cn-ip.yaml')
