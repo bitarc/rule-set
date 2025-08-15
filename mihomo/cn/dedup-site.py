@@ -83,14 +83,21 @@ def dedup_and_format_yaml(input_path, output_path):
             return (2, x)
     str_items_sorted = sorted(str_items, key=sort_key)
     data['payload'] = str_items_sorted + other_items
+    class IndentDumper(yaml.SafeDumper):
+        def increase_indent(self, flow=False, indentless=False):
+            return super().increase_indent(flow, False)
+
     with open(output_path, 'w', encoding='utf-8', newline='\n') as f:
         yaml.dump(
             data,
             f,
             allow_unicode=True,
-            sort_keys=False,
             indent=2,
-            default_flow_style=False
+            default_flow_style=False,
+            sort_keys=False,
+            width=4096,
+            Dumper=IndentDumper,
+            line_break='\n'
         )
 
 if __name__ == '__main__':
