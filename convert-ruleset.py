@@ -38,7 +38,35 @@ def yaml_to_json_rule(yaml_path, json_path):
     with open(json_path, 'w', encoding='utf-8', newline='\n') as f:
         json.dump(json_obj, f, ensure_ascii=False, indent=2)
 
-# 处理 mihomo 目录下所有子目录的 *-ip.yaml 和 *-site.yaml 文件，转json到 sing-box 下对应目录
+def enforce_yaml_lf(yaml_path):
+    """
+    读取 yaml 文件，格式化为标准 yaml（缩进2空格，block风格，单引号，顺序不变，换行符LF），覆盖写回。
+    """
+    with open(yaml_path, 'r', encoding='utf-8') as f:
+        data = yaml.safe_load(f)
+    with open(yaml_path, 'w', encoding='utf-8', newline='\n') as f:
+        yaml.dump(
+            data,
+            f,
+            allow_unicode=True,
+            indent=2,
+            default_flow_style=False,
+            sort_keys=False,
+            width=4096,
+            Dumper=yaml.SafeDumper,
+            line_break='\n'
+        )
+
+
+# 1. 先递归格式化 mihomo 下所有 *-ip.yaml 和 *-site.yaml 文件
+for root, dirs, files in os.walk('mihomo'):
+    for file in files:
+        if file.endswith('-ip.yaml') or file.endswith('-site.yaml'):
+            yaml_path = os.path.join(root, file)
+            print(f'格式化 {yaml_path} 为标准 yaml')
+            enforce_yaml_lf(yaml_path)
+
+# 2. 处理 mihomo 目录下所有子目录的 *-ip.yaml 和 *-site.yaml 文件，转json到 sing-box 下对应目录
 for root, dirs, files in os.walk('mihomo'):
     rel_dir = os.path.relpath(root, 'mihomo')
     singbox_target_dir = os.path.join('sing-box', rel_dir)
@@ -58,20 +86,14 @@ for root, dirs, files in os.walk('sing-box'):
             print(f'正在转换 {json_path} 为 srs')
             subprocess.run([singbox_bin, 'rule-set', 'compile', json_path])
 
-# mihomo下所有*-ip.yaml转为*-ip.mrs
+
+# 3. mihomo下所有*-ip.yaml转为*-ip.mrs（此处不再调用 enforce_yaml_lf，直接用格式化后的 yaml）
 for root, dirs, files in os.walk('mihomo'):
     for file in files:
         if file.endswith('-ip.yaml'):
             yaml_path = os.path.join(root, file)
             mrs_path = os.path.join(root, os.path.splitext(file)[0] + '.mrs')
             print(f'正在将 {yaml_path} 转换为 {mrs_path}')
-            # 读取 yaml，写回时强制 LF
-            with open(yaml_path, 'r', encoding='utf-8') as f:
-                data = f.read()
-            # 替换所有 CRLF 为 LF
-            data = data.replace('\r\n', '\n')
-            with open(yaml_path, 'w', encoding='utf-8', newline='\n') as f:
-                f.write(data)
             subprocess.run([mihomo_bin, 'convert-ruleset', 'ipcidr', 'yaml', yaml_path, mrs_path])
 
 print('全部转换完成')
