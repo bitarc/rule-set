@@ -65,15 +65,33 @@ def dedup_and_format_yaml(input_path, output_path):
         print('payload 字段不存在或文件内容为空')
         return
     seen = set()
-    new_payload = []
+    str_items = []
+    other_items = []
     for item in data['payload']:
         if isinstance(item, str):
             if item not in seen:
                 seen.add(item)
-                new_payload.append(item)
+                str_items.append(item)
         else:
-            new_payload.append(item)
-    data['payload'] = new_payload
+            other_items.append(item)
+    # 先分 IPv4 和 IPv6，IPv4 排前
+    import ipaddress
+    ipv4_list = []
+    ipv6_list = []
+    for s in str_items:
+        try:
+            ip = s.split('/')[0]
+            if ':' in ip:
+                ipv6_list.append(s)
+            else:
+                # 进一步校验是否为合法 IPv4
+                ipaddress.IPv4Address(ip)
+                ipv4_list.append(s)
+        except Exception:
+            ipv6_list.append(s)  # 兜底放后面
+    ipv4_list_sorted = sorted(ipv4_list)
+    ipv6_list_sorted = sorted(ipv6_list)
+    data['payload'] = ipv4_list_sorted + ipv6_list_sorted + other_items
     with open(output_path, 'w', encoding='utf-8') as f:
         yaml.dump(
             data,
@@ -85,4 +103,4 @@ def dedup_and_format_yaml(input_path, output_path):
         )
 
 if __name__ == '__main__':
-    dedup_and_format_yaml('cn-site.yaml', 'cn-site_dedup.yaml')
+    dedup_and_format_yaml('cn-ip.yaml', 'cn-ip_dedup.yaml')

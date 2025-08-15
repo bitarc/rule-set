@@ -35,7 +35,7 @@ def yaml_to_json_rule(yaml_path, json_path):
         "version": 3,
         "rules": [dict(rule)]
     }
-    with open(json_path, 'w', encoding='utf-8') as f:
+    with open(json_path, 'w', encoding='utf-8', newline='\n') as f:
         json.dump(json_obj, f, ensure_ascii=False, indent=2)
 
 # 处理 mihomo 目录下所有子目录的 *-ip.yaml 和 *-site.yaml 文件，转json到 sing-box 下对应目录
@@ -65,6 +65,13 @@ for root, dirs, files in os.walk('mihomo'):
             yaml_path = os.path.join(root, file)
             mrs_path = os.path.join(root, os.path.splitext(file)[0] + '.mrs')
             print(f'正在将 {yaml_path} 转换为 {mrs_path}')
+            # 读取 yaml，写回时强制 LF
+            with open(yaml_path, 'r', encoding='utf-8') as f:
+                data = f.read()
+            # 替换所有 CRLF 为 LF
+            data = data.replace('\r\n', '\n')
+            with open(yaml_path, 'w', encoding='utf-8', newline='\n') as f:
+                f.write(data)
             subprocess.run([mihomo_bin, 'convert-ruleset', 'ipcidr', 'yaml', yaml_path, mrs_path])
 
 print('全部转换完成')
