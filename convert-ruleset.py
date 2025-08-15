@@ -40,7 +40,7 @@ def yaml_to_json_rule(yaml_path, json_path):
 
 def enforce_yaml_lf(yaml_path):
     """
-    读取 yaml 文件，格式化为标准 yaml（缩进2空格，block风格，单引号，顺序不变，换行符LF），覆盖写回。
+    读取 yaml 文件，格式化为标准 yaml（缩进2空格，block风格，顺序不变，换行符LF），覆盖写回。
     """
     with open(yaml_path, 'r', encoding='utf-8') as f:
         data = yaml.safe_load(f)
