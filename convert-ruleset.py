@@ -44,6 +44,10 @@ def enforce_yaml_lf(yaml_path):
     """
     with open(yaml_path, 'r', encoding='utf-8') as f:
         data = yaml.safe_load(f)
+    class IndentDumper(yaml.SafeDumper):
+        def increase_indent(self, flow=False, indentless=False):
+            return super().increase_indent(flow, False)
+
     with open(yaml_path, 'w', encoding='utf-8', newline='\n') as f:
         yaml.dump(
             data,
@@ -53,7 +57,7 @@ def enforce_yaml_lf(yaml_path):
             default_flow_style=False,
             sort_keys=False,
             width=4096,
-            Dumper=yaml.SafeDumper,
+            Dumper=IndentDumper,
             line_break='\n'
         )
 
