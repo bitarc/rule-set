@@ -4,7 +4,4 @@ mihomo
 !mihomo/
 mihomo.exe
 sing-box.exe
-mihomo/cn/cn-site.yaml.fixed
-mihomo/cn/cn-site_dedup.yaml
-mihomo/cn/cn-ip.yaml.fixed
-mihomo/cn/cn-ip_dedup.yaml
+mihomo/cn/*.fixed
