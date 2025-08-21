@@ -101,4 +101,4 @@ def dedup_and_format_yaml(input_path, output_path):
         )
 
 if __name__ == '__main__':
-    dedup_and_format_yaml('cn-site.yaml', 'cn-site.yaml')
+    dedup_and_format_yaml('cn-site-classical.yaml', 'cn-site-classical.yaml')

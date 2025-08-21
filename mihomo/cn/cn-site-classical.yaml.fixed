@@ -22167,7 +22167,6 @@ payload:
   - DOMAIN-SUFFIX,chinapaper.net
   - DOMAIN-SUFFIX,chinaparking.org
   - DOMAIN-SUFFIX,chinapastel.com
-  - DOMAIN-SUFFIX,chinapay.cn
   - DOMAIN-SUFFIX,chinapay.com
   - DOMAIN-SUFFIX,chinapayhongkong.com
   - DOMAIN-SUFFIX,chinapbw.com
@@ -22377,7 +22376,6 @@ payload:
   - DOMAIN-SUFFIX,chinaunicom.com.hk
   - DOMAIN-SUFFIX,chinaunicomglobal.com
   - DOMAIN-SUFFIX,chinaunionpay.com
-  - DOMAIN-SUFFIX,chinaunionpay.com.cn
   - DOMAIN-SUFFIX,chinaunionpay.net
   - DOMAIN-SUFFIX,chinauniversalasset.com
   - DOMAIN-SUFFIX,chinaunix.com
@@ -27118,8 +27116,6 @@ payload:
   - DOMAIN-SUFFIX,cuour.com
   - DOMAIN-SUFFIX,cuour.org
   - DOMAIN-SUFFIX,cuoxin.com
-  - DOMAIN-SUFFIX,cup.com.cn
-  - DOMAIN-SUFFIX,cup62.cn
   - DOMAIN-SUFFIX,cupdapp.com
   - DOMAIN-SUFFIX,cupdata.com
   - DOMAIN-SUFFIX,cupddns.com
@@ -96936,7 +96932,6 @@ payload:
   - DOMAIN-SUFFIX,unionpay.com
   - DOMAIN-SUFFIX,unionpay.net
   - DOMAIN-SUFFIX,unionpay95516.cc
-  - DOMAIN-SUFFIX,unionpayintl.cn
   - DOMAIN-SUFFIX,unionpayintl.com
   - DOMAIN-SUFFIX,unionpaysecure.com
   - DOMAIN-SUFFIX,uniontech.com
@@ -118500,3 +118495,19 @@ payload:
   - DOMAIN-SUFFIX,zzzyyy.com
   - DOMAIN-SUFFIX,zzzzaaaa.com
   - DOMAIN-SUFFIX,zzzzzz.me
+  - DOMAIN-SUFFIX,95516.com
+  - DOMAIN-SUFFIX,95516.net
+  - DOMAIN-SUFFIX,airepay.net
+  - DOMAIN-SUFFIX,chinapay.cn
+  - DOMAIN-SUFFIX,chinapay.com
+  - DOMAIN-SUFFIX,chinapayhongkong.com
+  - DOMAIN-SUFFIX,chinaunionpay.com
+  - DOMAIN-SUFFIX,chinaunionpay.com.cn
+  - DOMAIN-SUFFIX,chinaunionpay.net
+  - DOMAIN-SUFFIX,cup.com.cn
+  - DOMAIN-SUFFIX,cup62.cn
+  - DOMAIN-SUFFIX,unionpay.com
+  - DOMAIN-SUFFIX,unionpay.net
+  - DOMAIN-SUFFIX,unionpayintl.cn
+  - DOMAIN-SUFFIX,unionpayintl.com
+  - DOMAIN-SUFFIX,unionpaysecure.com
