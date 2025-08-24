@@ -330,3 +330,4 @@ payload:
   - DOMAIN-SUFFIX,sa-brazil-1.myhuaweicloud.com
   - DOMAIN-SUFFIX,tr-west-1.myhuaweicloud.com
   - DOMAIN-SUFFIX,dbankcloud.asia
+  - DOMAIN-SUFFIX,dbankcloud.eu
