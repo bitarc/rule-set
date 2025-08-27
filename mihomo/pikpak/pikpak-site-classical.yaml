@@ -10,6 +10,7 @@ payload:
   - DOMAIN,o4504926511693824.ingest.sentry.io
   - DOMAIN,user.mypikpak.net
   - DOMAIN,static.mypikpak.net
+  - DOMAIN,sg-thumbnail-drive.mypikpak.net
   - DOMAIN-SUFFIX,mypikpak.com
   - DOMAIN-SUFFIX,pikpak.me
   - DOMAIN-SUFFIX,pikpakdrive.com
