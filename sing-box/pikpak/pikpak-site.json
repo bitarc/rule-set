@@ -12,7 +12,8 @@
         "access.pikpakdrive.com,PROXY",
         "api-drive.pikpakdrive.com,PROXY",
         "o4504926511693824.ingest.sentry.io",
-        "user.mypikpak.net"
+        "user.mypikpak.net",
+        "static.mypikpak.net"
       ],
       "domain_suffix": [
         "mypikpak.com",

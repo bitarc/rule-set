@@ -9,6 +9,7 @@ payload:
   - DOMAIN,api-drive.pikpakdrive.com,PROXY
   - DOMAIN,o4504926511693824.ingest.sentry.io
   - DOMAIN,user.mypikpak.net
+  - DOMAIN,static.mypikpak.net
   - DOMAIN-SUFFIX,mypikpak.com
   - DOMAIN-SUFFIX,pikpak.me
   - DOMAIN-SUFFIX,pikpakdrive.com
