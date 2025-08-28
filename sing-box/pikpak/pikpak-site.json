@@ -3,14 +3,14 @@
   "rules": [
     {
       "domain": [
-        "access.mypikpak.com,PROXY",
-        "api-drive.mypikpak.com,PROXY",
-        "access.mypikpak.net,PROXY",
-        "api-drive.mypikpak.net,PROXY",
-        "access.pikpak.me,PROXY",
-        "api-drive.pikpak.me,PROXY",
-        "access.pikpakdrive.com,PROXY",
-        "api-drive.pikpakdrive.com,PROXY",
+        "access.mypikpak.com",
+        "api-drive.mypikpak.com",
+        "access.mypikpak.net",
+        "api-drive.mypikpak.net",
+        "access.pikpak.me",
+        "api-drive.pikpak.me",
+        "access.pikpakdrive.com",
+        "api-drive.pikpakdrive.com",
         "o4504926511693824.ingest.sentry.io",
         "user.mypikpak.net",
         "static.mypikpak.net",

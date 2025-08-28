@@ -1,12 +1,12 @@
 payload:
-  - DOMAIN,access.mypikpak.com,PROXY
-  - DOMAIN,api-drive.mypikpak.com,PROXY
-  - DOMAIN,access.mypikpak.net,PROXY
-  - DOMAIN,api-drive.mypikpak.net,PROXY
-  - DOMAIN,access.pikpak.me,PROXY
-  - DOMAIN,api-drive.pikpak.me,PROXY
-  - DOMAIN,access.pikpakdrive.com,PROXY
-  - DOMAIN,api-drive.pikpakdrive.com,PROXY
+  - DOMAIN,access.mypikpak.com
+  - DOMAIN,api-drive.mypikpak.com
+  - DOMAIN,access.mypikpak.net
+  - DOMAIN,api-drive.mypikpak.net
+  - DOMAIN,access.pikpak.me
+  - DOMAIN,api-drive.pikpak.me
+  - DOMAIN,access.pikpakdrive.com
+  - DOMAIN,api-drive.pikpakdrive.com
   - DOMAIN,o4504926511693824.ingest.sentry.io
   - DOMAIN,user.mypikpak.net
   - DOMAIN,static.mypikpak.net
