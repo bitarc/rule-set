@@ -1,17 +1,28 @@
 payload:
   - access.mypikpak.com
   - api-drive.mypikpak.com
+  - static.mypikpak.com
+  - sg-thumbnail-drive.mypikpak.com
+  - config.mypikpak.com
+  - user.pikpak.com
   - access.mypikpak.net
   - api-drive.mypikpak.net
-  - access.pikpak.me
-  - api-drive.pikpak.me
-  - access.pikpakdrive.com
-  - api-drive.pikpakdrive.com
-  - o4504926511693824.ingest.sentry.io
-  - user.mypikpak.net
   - static.mypikpak.net
   - sg-thumbnail-drive.mypikpak.net
   - config.mypikpak.net
-  - +.mypikpak.com
+  - user.pikpak.net
+  - access.pikpak.me
+  - api-drive.pikpak.me
+  - static.pikpak.me
+  - sg-thumbnail-drive.pikpak.me
+  - config.pikpak.me
+  - user.pikpak.me
+  - access.pikpakdrive.com
+  - api-drive.pikpakdrive.com
+  - static.pikpakdrive.com
+  - sg-thumbnail-drive.pikpakdrive.com
+  - config.pikpakdrive.com
+  - user.pikpakdrive.com
+  - o4504926511693824.ingest.sentry.io
   - +.pikpak.me
   - +.pikpakdrive.com

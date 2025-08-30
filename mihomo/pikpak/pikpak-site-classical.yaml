@@ -1,17 +1,28 @@
 payload:
   - DOMAIN,access.mypikpak.com
   - DOMAIN,api-drive.mypikpak.com
+  - DOMAIN,static.mypikpak.com
+  - DOMAIN,sg-thumbnail-drive.mypikpak.com
+  - DOMAIN,config.mypikpak.com
+  - DOMAIN,user.pikpak.com
   - DOMAIN,access.mypikpak.net
   - DOMAIN,api-drive.mypikpak.net
-  - DOMAIN,access.pikpak.me
-  - DOMAIN,api-drive.pikpak.me
-  - DOMAIN,access.pikpakdrive.com
-  - DOMAIN,api-drive.pikpakdrive.com
-  - DOMAIN,o4504926511693824.ingest.sentry.io
-  - DOMAIN,user.mypikpak.net
   - DOMAIN,static.mypikpak.net
   - DOMAIN,sg-thumbnail-drive.mypikpak.net
   - DOMAIN,config.mypikpak.net
-  - DOMAIN-SUFFIX,mypikpak.com
+  - DOMAIN,user.pikpak.net
+  - DOMAIN,access.pikpak.me
+  - DOMAIN,api-drive.pikpak.me
+  - DOMAIN,static.pikpak.me
+  - DOMAIN,sg-thumbnail-drive.pikpak.me
+  - DOMAIN,config.pikpak.me
+  - DOMAIN,user.pikpak.me
+  - DOMAIN,access.pikpakdrive.com
+  - DOMAIN,api-drive.pikpakdrive.com
+  - DOMAIN,static.pikpakdrive.com
+  - DOMAIN,sg-thumbnail-drive.pikpakdrive.com
+  - DOMAIN,config.pikpakdrive.com
+  - DOMAIN,user.pikpakdrive.com
+  - DOMAIN,o4504926511693824.ingest.sentry.io
   - DOMAIN-SUFFIX,pikpak.me
   - DOMAIN-SUFFIX,pikpakdrive.com
