@@ -32,7 +32,7 @@ jobs:
             echo "UPDATED=false" >> $GITHUB_ENV
           else
             echo "New version available: $REMOTE_VERSION (published at $REMOTE_DATE)"
-            curl -L -o dist.zip https://github.com/Zephyruso/zashboard/releases/latest/download/dist-cdn-fonts.zip
+            curl -L -o dist.zip https://github.com/Zephyruso/zashboard/releases/latest/download/dist-no-fonts.zip
             echo "$REMOTE_VERSION" > .version
             echo "UPDATED=true" >> $GITHUB_ENV
           fi
