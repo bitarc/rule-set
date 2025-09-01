@@ -4,13 +4,13 @@ payload:
   - DOMAIN,static.mypikpak.com
   - DOMAIN,sg-thumbnail-drive.mypikpak.com
   - DOMAIN,config.mypikpak.com
-  - DOMAIN,user.pikpak.com
+  - DOMAIN,user.mypikpak.com
   - DOMAIN,access.mypikpak.net
   - DOMAIN,api-drive.mypikpak.net
   - DOMAIN,static.mypikpak.net
   - DOMAIN,sg-thumbnail-drive.mypikpak.net
   - DOMAIN,config.mypikpak.net
-  - DOMAIN,user.pikpak.net
+  - DOMAIN,user.mypikpak.net
   - DOMAIN,access.pikpak.me
   - DOMAIN,api-drive.pikpak.me
   - DOMAIN,static.pikpak.me
