@@ -10,7 +10,7 @@ def ensure_dir(path):
         os.makedirs(path)
 
 # 自动适配可执行文件名
-mihomo_bin = 'mihomo.exe' if os.name == 'nt' else './mihomo'
+mihomo_bin = 'mihomo-windows-amd64.exe' if os.name == 'nt' else './mihomo-linux-amd64'
 singbox_bin = 'sing-box.exe' if os.name == 'nt' else './sing-box'
 
 def yaml_to_json_rule(yaml_path, json_path):

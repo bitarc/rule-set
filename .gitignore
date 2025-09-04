@@ -1,8 +1,7 @@
 sing-box
 !sing-box/
-mihomo
-!mihomo/
-mihomo.exe
+mihomo-linux-amd64
+mihomo-windows-amd64.exe
 sing-box.exe
 mihomo/cn/*.fixed
 mihomo/cn/*.bak
